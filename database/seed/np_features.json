@@ -1,0 +1,159 @@
+{
+ "_note": "SMARTS motifs used to describe structures in prediction explanations. Descriptive only; not model weights. Shared by backend and browser engine.",
+ "features": [
+  {
+   "name": "Basic/aliphatic amine nitrogen",
+   "smarts": "[NX3;!$(N-C=[O,S,N]);!$(N-a);!$(N-S(=O))]",
+   "pathways": [
+    "Alkaloids"
+   ]
+  },
+  {
+   "name": "Aromatic nitrogen heterocycle",
+   "smarts": "[n]",
+   "pathways": [
+    "Alkaloids"
+   ]
+  },
+  {
+   "name": "Purine (xanthine) core",
+   "smarts": "c1ncc2nc[nH0,nH]c2n1",
+   "pathways": [
+    "Alkaloids"
+   ]
+  },
+  {
+   "name": "Indole / carbazole-type N-aryl system",
+   "smarts": "c1ccc2c(c1)cc[nX3]2",
+   "pathways": [
+    "Alkaloids"
+   ]
+  },
+  {
+   "name": "Tropane (8-azabicyclo[3.2.1]octane)",
+   "smarts": "C1CC2CCC(C1)N2",
+   "pathways": [
+    "Alkaloids"
+   ]
+  },
+  {
+   "name": "2-Phenylchromen-4-one (flavone) core",
+   "smarts": "O=c1cc(-c2ccccc2)oc2ccccc12",
+   "pathways": [
+    "Shikimates and Phenylpropanoids"
+   ]
+  },
+  {
+   "name": "3-Phenylchromen-4-one (isoflavone) core",
+   "smarts": "O=c1c(-c2ccccc2)coc2ccccc12",
+   "pathways": [
+    "Shikimates and Phenylpropanoids"
+   ]
+  },
+  {
+   "name": "Flavan (2-phenylchromane) core",
+   "smarts": "C1(c2ccccc2)CCc2ccccc2O1",
+   "pathways": [
+    "Shikimates and Phenylpropanoids"
+   ]
+  },
+  {
+   "name": "Coumarin (2H-chromen-2-one) core",
+   "smarts": "O=c1ccc2ccccc2o1",
+   "pathways": [
+    "Shikimates and Phenylpropanoids"
+   ]
+  },
+  {
+   "name": "C6–C3 phenylpropanoid unit (Ar–C=C–C)",
+   "smarts": "c-[CX3]=[CX3]-[#6]",
+   "pathways": [
+    "Shikimates and Phenylpropanoids"
+   ]
+  },
+  {
+   "name": "Stilbene (Ar–CH=CH–Ar)",
+   "smarts": "c-[CH]=[CH]-c",
+   "pathways": [
+    "Shikimates and Phenylpropanoids"
+   ]
+  },
+  {
+   "name": "Catechol (1,2-dihydroxyarene)",
+   "smarts": "c(O)c[OH]",
+   "pathways": [
+    "Shikimates and Phenylpropanoids"
+   ]
+  },
+  {
+   "name": "Isopropenyl / gem-dimethyl (isoprenoid) motif",
+   "smarts": "[CH3]C([CH3])",
+   "pathways": [
+    "Terpenoids"
+   ]
+  },
+  {
+   "name": "Trisubstituted alkene of prenyl units",
+   "smarts": "[CH3][CX3]([CH3,CH2])=[CX3H]",
+   "pathways": [
+    "Terpenoids"
+   ]
+  },
+  {
+   "name": "Endoperoxide",
+   "smarts": "OO",
+   "pathways": [
+    "Terpenoids"
+   ]
+  },
+  {
+   "name": "α-Methylene-γ-butyrolactone",
+   "smarts": "C=C1C(=O)OCC1",
+   "pathways": [
+    "Terpenoids"
+   ]
+  },
+  {
+   "name": "β-Lactam (azetidin-2-one)",
+   "smarts": "O=C1CCN1",
+   "pathways": [
+    "Amino acids and Peptides"
+   ]
+  },
+  {
+   "name": "Peptide (amide) bond between α-carbons",
+   "smarts": "[CX4][CX3](=O)[NX3][CX4]",
+   "pathways": [
+    "Amino acids and Peptides"
+   ]
+  },
+  {
+   "name": "Glycoside (sugar ring)",
+   "smarts": "[OX2;R][CX4;R]([OX2])[CX4;R][OX2H]",
+   "pathways": [
+    "Carbohydrates"
+   ]
+  },
+  {
+   "name": "Anthraquinone core",
+   "smarts": "O=C1c2ccccc2C(=O)c2ccccc21",
+   "pathways": [
+    "Polyketides"
+   ]
+  },
+  {
+   "name": "δ-Lactone (six-membered)",
+   "smarts": "O=C1CCCCO1",
+   "pathways": [
+    "Polyketides"
+   ]
+  },
+  {
+   "name": "Long aliphatic chain (≥6 CH2)",
+   "smarts": "[CH2][CH2][CH2][CH2][CH2][CH2]",
+   "pathways": [
+    "Fatty acids"
+   ]
+  }
+ ]
+}

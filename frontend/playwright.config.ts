@@ -10,10 +10,14 @@ export default defineConfig({
   timeout: 90_000,
   expect: { timeout: 30_000 },
   reporter: [['list']],
+  // CI runners have 2 cores; one browser at a time keeps WASM compilation and software WebGL from starving.
+  workers: process.env.CI ? 1 : undefined,
+  retries: process.env.CI ? 1 : 0,
   use: {
     baseURL: process.env.E2E_BASE_URL || 'http://localhost:4173',
     launchOptions: executablePath ? { executablePath, args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader'] } : { args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader'] },
     screenshot: 'only-on-failure',
+    trace: 'retain-on-failure',
     ignoreHTTPSErrors: true,
   },
   projects: [

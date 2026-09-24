@@ -1,6 +1,7 @@
 name: Deploy static site to GitHub Pages
 # Builds the browser-only app and publishes it to the `gh-pages` branch.
-# One-time setup: Settings → Pages → Source "Deploy from a branch" → Branch "gh-pages" / (root).
+# One-time setup: Settings → Pages → Source "Deploy from a branch" → Branch "gh-pages".
+# The site is published to both / (root) and /docs, so either folder setting works.
 on:
   push:
     branches: [main]
@@ -27,8 +28,11 @@ jobs:
         working-directory: frontend
         env: { VITE_ENGINE: browser }
       - name: Publish to gh-pages
-        working-directory: frontend/dist
         run: |
+          mkdir -p site/docs
+          cp -a frontend/dist/. site/
+          cp -a frontend/dist/. site/docs/
+          cd site
           git init -q -b gh-pages
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

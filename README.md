@@ -341,7 +341,7 @@ Invalid input:
 
 `.github/workflows/pages.yml` builds the frontend with the browser engine and publishes `dist/` to
 the `gh-pages` branch on every push to `main`. Enable it once under **Settings › Pages › Deploy
-from a branch › `gh-pages` / (root)**. The site is then served at
+from a branch › `gh-pages`** (folder `/ (root)` or `/docs`; the site is published to both). The site is then served at
 https://snehasis2024.github.io/natural-product-explorer/. The static site runs completely client-side: search, filters, structure search,
 properties, 3D, comparison, analytics and the demo baseline all work. NPC-BERT, live QED/SA
 scores for new structures and external database lookups need the API.
